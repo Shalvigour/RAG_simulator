@@ -5,10 +5,12 @@ from PyQt6.QtCore import Qt
 from PyQt6.QtGui import QKeySequence, QShortcut, QPainter
 
 class ResourceDialog(QDialog):
+  #Dialog window to add a new resource with a specified number of instances.
     def __init__(self, parent=None):
         super().__init__(parent)
         self.setWindowTitle("Add Resource")
         layout = QVBoxLayout(self)
+      # Layout for specifying the number of resource instances
         instance_layout = QHBoxLayout()
         instance_layout.addWidget(QLabel("Number of instances:"))
         self.instance_spinbox = QSpinBox()
@@ -17,15 +19,18 @@ class ResourceDialog(QDialog):
         self.instance_spinbox.setValue(1)
         instance_layout.addWidget(self.instance_spinbox)
         layout.addLayout(instance_layout)
+       # Button to confirm adding the resource
         add_button = QPushButton("Add")
         add_button.clicked.connect(self.accept)
         layout.addWidget(add_button)
 
 class EdgeDialog(QDialog):
+  #Dialog window for adding edges between nodes (processes and resources).
     def __init__(self, nodes, edge_type, parent=None):
         super().__init__(parent)
         self.setWindowTitle(f"Add {edge_type.capitalize()} Edge")
         layout = QVBoxLayout(self)
+       # Layout for specifying the source node
         from_layout = QHBoxLayout()
         from_layout.addWidget(QLabel("From:"))
         self.from_combo = QLineEdit()
