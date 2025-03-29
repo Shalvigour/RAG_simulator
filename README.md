@@ -22,10 +22,22 @@ A graphical tool for simulating and analyzing deadlock scenarios using Resource 
 
 1. Clone the repository or download the source code
 2. Create a virtual environment (recommended):
+```bash
 python -m venv .venv
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+source .venv/bin/activate  # On Mac
+.venv\Scripts\activate  # On Windows
+```
+
 3. Install the required packages:
+```bash
 pip install PyQt6==6.6.1 networkx==3.2.1
+```
+
+## Running the Application
+
+```bash
+python rag_simulator.py
+```
 
 ## Running the Application
 
