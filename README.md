@@ -36,7 +36,7 @@ pip install PyQt6==6.6.1 networkx==3.2.1
 ## Running the Application
 
 ```bash
-python rag_simulator.py
+python main_controller.py
 ```
 
 ## Running the Application
